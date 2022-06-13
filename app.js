@@ -30,7 +30,7 @@ const scene1 = gsap.timeline({
         trigger: "#d1",
         start: "top 80%",
         // markers: true,
-        // scrub: 1,
+        scrub: 1,
         pin: "#scene1",
     },
     default: {
