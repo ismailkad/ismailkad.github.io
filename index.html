@@ -9,16 +9,47 @@
     </head>
 
     <body>
-        <audio id="soundtrack" autoplay loop>
-            <source src="musique/THEME PRINCIPAL CHILL.mp3" type="audio/mpeg">
+        <!-- MELANCOLIE -->
+        <audio id="melancolie" loop>
+            <source src="musique/THEME MELANCOLIQUE.wav" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <!-- ESPOIR -->
+        <audio id="espoir" loop>
+            <source src="musique/THEME ESPOIR.wav" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <!-- COLERE -->
+        <audio id="colere" loop>
+            <source src="musique/THEME COLERE.wav" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <!-- ENIGME -->
+        <audio id="enigme" loop>
+            <source src="musique/THEME ENIGME.wav" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <!-- GUITARE -->
+        <audio id="guitare" loop>
+            <source src="musique/musique_guitare.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
 
         <header>
+
             <ul>
-                <li> <a href="#" class="active">Histoire</a></li>
+                <!-- <li> <a href="#" class="active">Histoire</a></li>
                 <li> <a href="#">A propos</a></li>
-                <li> <a href="#">Contact</a></li>
+                <li> <a href="#">Contact</a></li> -->
+                <li>        
+                    <audio id="soundtrack" autoplay controls loop>
+                        <source src="musique/THEME PRINCIPAL CHILL.mp3" type="audio/mpeg">
+                    </audio>
+                </li>
             </ul>
         </header>
 
@@ -29,9 +60,15 @@
             <img src="img/decor/silhouette.png" id="silhouette"> -->
 
             <h2 id="text">Du jour au lendemain</h2>
+                    <!-- THEME PRINCIPAL -->
         </section>
 
-        <div class="sep">
+        <div class="sep" id="sep_intro">
+            <span class="interscene" id="interscene_intro">
+                Vous allez vivre l'histoire de Sofia et Noa. Pour se faire, continuez de scroller verticalement afin de révéler le fil du récit.
+                Vous serez amener à faire des choix, qui finiront par avoir une conséquence sur les vies de nos protagonistes. Pesez le pour et le contre, et menez
+                nos deux personnages hors de leur enfer. 
+            </span>
         </div>
 
         <!-------------------- SCENE 1 : INTRO ----------------------->
@@ -58,9 +95,9 @@
 
         <!-------------------- INTER-SCENE 1 ----------------------->
 
-        <div class="sep" id="sep_bomb">
-            <audio id="bomb" src="musique/bombing.wav" preload="auto"></audio>
-            <span class="interscene">Le lendemain, la guerre éclate dans le pays. </span>
+        <div class="sep" id="sep_guerre">
+            <span class="interscene" id="interscene_guerre">Le lendemain, la guerre éclate dans le pays pendant que Sofia et Noa sont à l'école.
+                Ils se précipitent vers leur maison, en espérant trouver leurs parents sains et saufs. </span>
         </div>
 
         <!-- SCENE 2 : DECOUVERTE MAISON EN RUINE -->
@@ -88,26 +125,64 @@
             </div>
         </section>
 
-        <div class="sep">
+        <div class="sep" id="sep_ruine">
+            <span class="interscene" id="interscene_ruine">N'ayant pas trouvé leurs parents à côté de leur domicile désormais en ruine,
+                Sofia et Noa entreprennent un petit voyage vers la frontière, en espérant les y retrouver là-bas.
+            </span>
         </div>
 
-        <!-- SCENE 3 : BUS -->
+        <!---------------------- SCENE 3 : BUS -------------------->
         <section id="scene3">
             <!-- FOND -->
             <img src="img/decor/scene3_bus.png" class="fond">
             <div class="container">
                 <!-- PERSONNAGES/DECORS -->
                 <img class="asset" src="img/personnage/sofia_noa_bus.png" id="sc3_sofia_noa">
+                <img class="asset" src="img/personnage/sofia_joyeuse.png" id="sc3_sofia">
+                <img class="asset" src="img/personnage/noa_triste.png" id="sc3_noa">
                 <img class="asset" src="img/personnage/bus_fenetre.png" id="sc3_fenetre">
+
+                <div class="dialogue" id="d3">
+                    <div class="dialogue-text"> 
+                        <!-- DIALOGUE -->
+                        <span id="sc3-d1">Noa: *pleure*</span>
+                        <span id="sc3-d2">Sofia : Tiens, prend cet écouteur *écoutent de la musique*</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <div class="sep">
-            <span class="interscene">Sofia et Noa arrivent dans la zone avant la frontière. 
+        <div class="sep" id="sep_frontiere">
+            <span class="interscene" id="interscene_frontiere">Sofia et Noa arrivent dans la zone avant la frontière. 
                 Aucune trace des parents, ils apprennent que les premiers arrivés ont déjà pris le large.
                 Ils attendent plusieurs jours dans un hôtel où ils sont entassés avec d’autres migrants. 
-                On leur distribue de petites rations de nourriture. Comment passer la frontière ? A qui faire confiance ?
-                 Aux autorités qui ont promis d’organiser des ferrys pour les faire traverser ou à un passeur qui peut les faire passer clandestinement ?</span>
+                On leur distribue de petites rations de nourriture.</span>
+        </div>
+
+        <!---------------------- SCENE 3 BIS: GUITARE -------------------->
+        <section id="scene3b">
+            <!-- FOND -->
+            <img src="img/decor/scene4_traversee.png" class="traversee">
+            <div class="container">
+                <!-- PERSONNAGES/DECORS -->
+                <img class="asset" src="img/personnage/sofia_pensive.png" id="sc3b_sofia">
+                <img class="asset" src="img/personnage/noa_normal.png" id="sc3b_noa">
+                <img class="asset" src="img/personnage/guitare_sofia_noa.png" id="sc3b_sofia_noa">
+
+                <div class="dialogue" id="d3b">
+                    <div class="dialogue-text"> 
+                        <!-- DIALOGUE -->
+                        <span id="sc3b-d1">Noa: Sofia je m'ennuie, c'est quand qu'on retrouve maman et papa?</span>
+                        <span id="sc3b-d2">Sofia : Bientôt je te le promets, tu veux que je te joue de la guitare ?</span>
+                        <span id="sc3b-d3">Noa : Oui oui s'il te plait !</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="sep" id="sep_frontiere_b">
+            <span class="interscene" id="interscene_frontiere_b">Comment passer la frontière ? A qui faire confiance ?
+                Aux autorités qui ont promis d’organiser des ferrys pour les faire traverser ou à un passeur qui peut les faire passer clandestinement ?</span>
         </div>
 
         <!-- SCENE 4 : FERRY OU PASSEUR -->
@@ -147,8 +222,8 @@
 
         </section>
 
-        <div class="sep">
-            Sofia et Noa arrivent finalement à un camp de réfugiés.
+        <div class="sep" id="sep_camp">
+            <span class="interscene" id="interscene_camp">Sofia et Noa arrivent finalement à un camp de réfugiés.</span>
         </div>    
 
         <!------------- SCENE 5 : CAMP -------------->
@@ -178,8 +253,8 @@
             </div>
         </section>
 
-        <div class="sep">
-            <span class="interscene">La nuit tombe. Sofia et Noa essayent de monter leur tente de fortune.
+        <div class="sep" id="sep_camp_nuit">
+            <span class="interscene" id="interscene_camp_nuit">La nuit tombe. Sofia et Noa essayent de monter leur tente de fortune.
                 Noa s'assoupit de fatigue.
             </span>
         </div>
@@ -199,8 +274,8 @@
                 <!-- DIALOGUE -->   
                 <div class="dialogue" id="d6">
                     <div class="dialogue-text"> 
-                        <span id="sc6-d1">Abel : Hey, tu es Sofia ?! Que fais-tu là avec ton frère sans tes parents?</span>
-                        <span id="sc6-d2">Abel : Mais voyons, c’est moi, Abel ! Je ne te veux rien de mal, ne t’en fais pas. <br>Je sais où sont tes parents et ils vont bien.
+                        <span id="sc6-d1">Farel : Hey, tu es Sofia ?! Que fais-tu là avec ton frère sans tes parents?</span>
+                        <span id="sc6-d2">Farel : Mais voyons, c’est moi, Abel ! Je ne te veux rien de mal, ne t’en fais pas. <br>Je sais où sont tes parents et ils vont bien.
                         Je peux t’aider. Mais ici, tout se monnaye.</span>
                         
                     </div>
@@ -215,8 +290,8 @@
             </div>
         </section>
 
-        <div class="sep" >
-            <span class="interscene"> Sofia travaille au camp pendant plusieurs jours afin de récupérer assez d’argent 
+        <div class="sep" id="sep_gare">
+            <span class="interscene" id="interscene_gare"> Sofia travaille au camp pendant plusieurs jours afin de récupérer assez d’argent 
                 pour acheter un billet de train. Elle aide à cultiver les pommes de terre dans le petit potager, 
                 elle fait la lessive et aide à construire les tentes des nouveaux arrivants.
                 Le salaire est maigre et la nourriture se fait rare. Noa est de plus en plus fatigué.
@@ -263,8 +338,8 @@
             </div>
         </section>
 
-        <div class="sep" >
-            <span class="interscene">Ainsi s'achève l'histoire de nos deux personnages. Cependant, des choix différents les auraient conduits
+        <div class="sep" id="sep_fin" >
+            <span class="interscene" id="interscene_fin">Ainsi s'achève l'histoire de nos deux personnages. Cependant, des choix différents les auraient conduits
                 à un chemin différent, qui sait...
             </span>
         </div>
