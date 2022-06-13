@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Italiana&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Homemade Apple', sans-serif;
+    background: black;   
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    padding: 30px 100px;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active
+{
+    background: #fff;
+    color: #2b1055;
+}
+
+section 
+{
+    position: relative;
+    width: 100%;
+    height: 125vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: width 5s;
+}
+
+section:hover {
+    width: 100%;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30vh;
+    background: linear-gradient(to top, #000, transparent);
+    z-index: 1000;
+}
+
+section::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to bottom, #000, transparent);
+}
+
+section img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section img#taches
+{
+    mix-blend-mode: lighten;
+    opacity: 80%;
+}
+
+.fond
+{
+    height: 100%;
+    object-position: 100% 100%;
+}
+
+.container {
+    /* border: 1px solid red; */
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    position: relative;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container img 
+{
+    object-fit: contain;
+    z-index: 100;
+    max-height: 80%;
+    top: 15%;
+    opacity: 0;  
+}
+
+#asset
+{
+    object-fit: contain;
+    z-index: 100;
+    max-height: 80%;
+    top: 22%;
+}
+
+
+#text
+{
+    position: absolute;
+    right: -1000px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 5vw;
+    z-index: 9;
+}
+
+/* Texte de dialogue */
+.dialogue
+{
+    border: 1px solid blue;
+    position: absolute;
+    bottom: 5%;
+    border-left: 6px solid white;
+    border-radius: 0 5px 5px 0;
+    background-color: black;
+    text-align: center;
+    width: 80%;
+    height: 10vh;
+    z-index:  100;
+    opacity: 0;
+    /* padding: 30px 0; */
+
+}
+
+.dialogue-text
+{
+    border: 1px solid red;
+    color: white;
+    width: 100%;
+    height: 80%;
+    white-space: nowrap;
+    font-size: 20px;
+    font-family: Helvetica, sans-serif;
+
+    margin: 0 1vw;
+    transform: translateY(15%);
+    display: flex;
+    position: absolute;
+    align-items: center;
+    word-break: break;
+    /* overflow-wrap: break-word; */
+}
+
+/* Boutons pour les choix */
+
+.button {
+    border: 1px solid blue;
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    z-index:1000;
+
+}
+
+.button button
+{
+    box-shadow: none;
+    border: 1px solid black;
+    padding: 8px 30px;
+    margin: 15px 15px;
+    border-radius: 15px 50px;
+    background: linear-gradient(to top, #fff, #fff5ea);
+    color: black;
+    font-size: 1.5em;
+    transition: all 1s;
+    opacity: 0.8;
+    cursor: pointer;
+    animation: wiggle 2s linear infinite;
+}
+
+.button button:hover {
+    background-color: #fff5ea;
+    opacity: 1;
+  }
+
+
+
+.sep {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 120vh;
+    align-items: center;
+    justify-content: center;
+    font-family: Helvetica, Arial, sans-serif;
+    background: #000;
+}
+
+.interscene
+{
+    color: #fff;
+    font-size: 2vw;
+    margin: 10vw 10vw;
+    text-align: center;
+}
+
+
+@keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-10deg);
+    }
+    20% {
+      transform: rotateZ(5deg);
+    }
+    25% {
+      transform: rotateZ(-5deg);
+    }
+    30% {
+      transform: rotateZ(3deg);
+    }
+    35% {
+      transform: rotateZ(-2deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+  
+/* PERSONNAGES */
+#sc1_sofia_noa { opacity: 0 }
+#sc1_mere { opacity: 0 }
+#sc1_pere { opacity: 0 }
+#sc1_noa { opacity: 0 }
+#sc2_sofia { opacity: 0 }
+#sc2_noa { opacity: 0 }
+#sc3_sofia_noa { opacity: 0 }
+#sc3_fenetre { opacity: 0; }
+#sc4_sofia { opacity: 0 }
+#sc4_noa { opacity: 0 }
+#sc2_chauffeur { opacity: 0; }
+#sc5_sofia { opacity: 0; }
+#sc5_noa { opacity: 0; }
+
+#sc6_sofia { opacity: 0; }
+#sc6_abel { opacity: 0; }
+
+#sc7_sofia_joyeuse { opacity: 0; }
+#sc7_noa_joyeux { opacity: 0; }
+#sc7_sofia_triste { opacity: 0; }
+#sc7_noa_triste { opacity: 0; }
+#sc7_sofia_colere { opacity: 0; }
+#sc7_sofia_colere { opacity: 0; }
+#sc7_mere { opacity: 0; }
+#sc7_pere { opacity: 0; }
+
+/* CHOIX */
+#choix1 { visibility: hidden; opacity: 0; }
+#choix2 { visibility: hidden; opacity: 0; }
+#choix2_bis {visibility: hidden; opacity: 0; z-index: 1001;}
+#choix3 { visibility: hidden; opacity: 0; }
+
+
+/* DIALOGUES*/
+#sc1-d1 {width: 0; opacity: 0 }
+#sc1-d2 {width: 0; opacity: 0 }
+#sc1-d3 {width: 0; opacity: 0 }
+#sc1-d4 {width: 0; opacity: 0 }
+#sc1-d5 {width: 0; opacity: 0 }
+
+#sc2-d1 {width: 0; opacity: 0 }
+#sc2-d2 {width: 0; opacity: 0 }
+#sc2-d3 {width: 0; opacity: 0 }
+
+#sc4-d1 {width: 0; opacity: 0 }
+#sc4-d2 {width: 0; opacity: 0 }
+#sc4-d3 {width: 0; opacity: 0 }
+
+#sc4-ferry_1 {width: 0; opacity: 0 }
+#sc4-passeur_1 {width: 0; opacity: 0 }
+#sc4-passeur_2 {width: 0; opacity: 0 }
+
+#sc5-d1 {width: 0; opacity: 0 }
+#sc5-d2 {width: 0; opacity: 0 }
+#sc5-d3 {width: 0; opacity: 0 }
+
+#sc7-d1 {width: 0; opacity: 0 }
+#sc7-d2 {width: 0; opacity: 0 }
+#sc7-d3 {width: 0; opacity: 0 }
+#sc7-d4 {width: 0; opacity: 0 }
+#sc7-d5 {width: 0; opacity: 0 }
+#sc7-d6 {width: 0; opacity: 0 }
+
+#gare {
+    opacity: 0;
+}
+
+.reveal {
+    /* border: 1px solid blue; */
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    z-index:1000;
+
+}
+
+#fin  {
+    box-shadow: none;
+    /* border: 1px solid red; */
+    width: 80%;
+    height: 80%;
+    padding: 30px 30px;
+    margin: 15px 15px;
+    border-radius: 200px;
+    background: white;
+    color: black;
+    font-size: 7em;
+    transition: all 1s;
+    opacity: 0.8;
+    cursor: pointer;
+    font-family: 'Homemade Apple', sans-serif;
+
+}
+
+#fin:hover {
+    background-color: white;
+    opacity: 1;
+  }
+

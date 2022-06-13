@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Du jour au lendemain</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <audio id="soundtrack" autoplay loop>
+            <source src="musique/THEME PRINCIPAL CHILL.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <header>
+            <ul>
+                <li> <a href="#" class="active">Histoire</a></li>
+                <li> <a href="#">A propos</a></li>
+                <li> <a href="#">Contact</a></li>
+            </ul>
+        </header>
+
+        <section class="intro">
+            <img src="img/decor/summer.jpg" class="fond">
+            <!-- <img src="img/decor/fond.png" id="fond">
+            <img src="img/decor/taches.png" id="taches">
+            <img src="img/decor/silhouette.png" id="silhouette"> -->
+
+            <h2 id="text">Du jour au lendemain</h2>
+        </section>
+
+        <div class="sep">
+        </div>
+
+        <!-------------------- SCENE 1 : INTRO ----------------------->
+        <section id="scene1">
+            <img src="img/decor/scene1_table.jpg" class="fond">
+            <div class="container">
+                <img class="asset" src="img/personnage/sofia_noa_joyeux.png" id="sc1_sofia_noa">
+                <img class="asset" src="img/personnage/mere.png" id="sc1_mere">
+                <img class="asset" src="img/personnage/pere.png" id="sc1_pere">
+                <img class="asset" src="img/personnage/noa_heureux.png" id="sc1_noa">
+
+                <div class="dialogue" id="d1">
+                    <div class="dialogue-text"> 
+                        <span id="sc1-d1">Mère : Ah vous voilà enfin !</span>
+                        <span id="sc1-d2">Sofia: Oui *soupir*, ils ont rajouté un autre point de contrôle sur le chemin</span>
+                        <span id="sc1-d3">Mère : Le dîner est déjà prêt !</span>
+                        <span id="sc1-d4">Père : A table !</span>
+                        <span id="sc1-d5">Noa : Ouaaaais !</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-------------------- INTER-SCENE 1 ----------------------->
+
+        <div class="sep" id="sep_bomb">
+            <audio id="bomb" src="musique/bombing.wav" preload="auto"></audio>
+            <span class="interscene">Le lendemain, la guerre éclate dans le pays. </span>
+        </div>
+
+        <!-- SCENE 2 : DECOUVERTE MAISON EN RUINE -->
+        <section id="scene2">
+            <img src="img/decor/scene2_ruine.jpg" class="fond">
+
+            <div class="container">
+                <img class="asset" src="img/personnage/sofia_pas_joyeuse.png" id="sc2_sofia">
+                <img class="asset" src="img/personnage/noa_triste.png" id="sc2_noa">
+                <img class="asset" src="img/personnage/chauffeur.png" id="sc2_chauffeur">
+
+                <div class="dialogue" id="d2">
+                    <div class="dialogue-text"> 
+                        <span id="sc2-d1">Noa : Maman, papa ! </span>
+                        <span id="sc2-d2">Sofia: Attends, je les appelle. (sans succès) Bon… Ils sont sûrement à la frontière.</span>
+                        <span id="sc2-d3">Chauffeur de bus : Oh mon Dieu ! Venez, je vous amène.</span>
+                    </div>
+                </div>
+
+                <div class="button" id="choix1">
+                    <button href="#" id="sc2_c1">Si on se dépêche, on peut les rattraper</button>
+                    <button href="#" id="sc2_c2">ils n'auraient pas pu répondre pour une fois ! </button>
+                    <button href="#" id="sc2_c3">ça va aller, Noa</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="sep">
+        </div>
+
+        <!-- SCENE 3 : BUS -->
+        <section id="scene3">
+            <!-- FOND -->
+            <img src="img/decor/scene3_bus.png" class="fond">
+            <div class="container">
+                <!-- PERSONNAGES/DECORS -->
+                <img class="asset" src="img/personnage/sofia_noa_bus.png" id="sc3_sofia_noa">
+                <img class="asset" src="img/personnage/bus_fenetre.png" id="sc3_fenetre">
+            </div>
+        </section>
+
+        <div class="sep">
+            <span class="interscene">Sofia et Noa arrivent dans la zone avant la frontière. 
+                Aucune trace des parents, ils apprennent que les premiers arrivés ont déjà pris le large.
+                Ils attendent plusieurs jours dans un hôtel où ils sont entassés avec d’autres migrants. 
+                On leur distribue de petites rations de nourriture. Comment passer la frontière ? A qui faire confiance ?
+                 Aux autorités qui ont promis d’organiser des ferrys pour les faire traverser ou à un passeur qui peut les faire passer clandestinement ?</span>
+        </div>
+
+        <!-- SCENE 4 : FERRY OU PASSEUR -->
+        <section id="scene4">
+
+            <!-- FOND -->
+            <img src="img/decor/scene4_traversee.png" class="traversee">
+
+            <div class="container">
+                <!-- PERSONNAGES/DECORS -->
+                <img class="asset" src="img/personnage/sofia_pensive.png" id="sc4_sofia">
+                <img class="asset" src="img/personnage/noa_pensif.png" id="sc4_noa">
+
+                <div class="dialogue" id="d4">
+                    <div class="dialogue-text"> 
+                        <!-- DIALOGUE -->
+                        <span id="sc4-d1">Sofia : Noa, t’as combien dans ta tirelire ?</span>
+                        <span id="sc4-d2">Noa : Pas beaucoup, regarde</span>
+                        <span id="sc4-d3">Sofia: C'est suffisant pour payer le passeur, mais que faire?</span>
+                        <span id="sc4-ferry_1">Sofia: Mieux vaut économiser et prendre le ferry</span>
+                        <span id="sc4-passeur_1">Sofia: Mieux vaut payer le passeur</span>
+                        <span id="sc4-passeur_2">Passeur: Hé, la guitare c’est comme un passager en plus!</span>
+                    </div>
+                </div>
+
+                <div class="button" id="choix2">
+                    <button href="#" id="sc4_c1">Prendre le ferry</button>
+                    <button href="#" id="sc4_c2">Payer le passeur</button>
+                </div>
+
+                <div class="button" id="choix2_bis">
+                    <button href="#" id="sc4_c1_bis">Payer et garder la guitare</button>
+                    <button href="#" id="sc4_c2_bis">Ne pas payer et abandonner la guitare</button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="sep">
+            Sofia et Noa arrivent finalement à un camp de réfugiés.
+        </div>    
+
+        <!------------- SCENE 5 : CAMP -------------->
+        <section id="scene5">
+
+            <!-- FOND -->
+            <img src="img/decor/camp couleur.jpg" class="camp">
+
+            <div class="container">
+
+                <!-- PERSONNAGES/DECORS -->
+                <img class="asset" src="img/personnage/sofia_pensive.png" id="sc5_sofia">
+                <img class="asset" src="img/personnage/noa_pensif.png" id="sc5_noa">
+
+                <!-- DIALOGUE -->   
+                <div class="dialogue" id="d5">
+                    <div class="dialogue-text"> 
+                        
+                        <span id="sc5-d1">Responsable *criant à tous les nouveaux arrivants* : Mettez-vous en ligne, on va vous fouiller. <br>
+                            Mettez-vous de suite à construire votre abri, il va pleuvoir cette nuit. </span>
+                        <span id="sc5-d2">Noa *reconnaît un ami de son père* : Hey, on le connaît lui ! *l'individu disparaît</span>
+                        <span id="sc5-d3">Sofia : Qui ça ? Vite, il faut se dépêcher à construire la tente avant la tombée de la nuit </span>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="sep">
+            <span class="interscene">La nuit tombe. Sofia et Noa essayent de monter leur tente de fortune.
+                Noa s'assoupit de fatigue.
+            </span>
+        </div>
+
+        <!------------- SCENE 6 : CAMP DE NUIT -------------->
+        <section id="scene6">
+
+            <!-- FOND -->
+            <img src="img/decor/camp couleur.jpg" class="camp">
+
+            <div class="container">
+                
+                <!-- PERSONNAGES/DECORS -->
+                <img class="asset" src="img/personnage/sofia_pas_joyeuse.png" id="sc6_sofia">
+                <img class="asset" src="img/personnage/abel.png" id="sc6_abel">
+
+                <!-- DIALOGUE -->   
+                <div class="dialogue" id="d6">
+                    <div class="dialogue-text"> 
+                        <span id="sc6-d1">Abel : Hey, tu es Sofia ?! Que fais-tu là avec ton frère sans tes parents?</span>
+                        <span id="sc6-d2">Abel : Mais voyons, c’est moi, Abel ! Je ne te veux rien de mal, ne t’en fais pas. <br>Je sais où sont tes parents et ils vont bien.
+                        Je peux t’aider. Mais ici, tout se monnaye.</span>
+                        
+                    </div>
+                </div>
+
+                <div class="button" id="choix3">
+                    <button href="#" id="sc6_c1">Oh, c’est toi… euh Farel c’est ça ? On a été séparés, tu as une idée d’où est-ce qu’ils pourraient être ? </button>
+                    <button href="#" id="sc6_c2">Ah, je te reconnais toi… Farel ? Ça fait un bout de temps qu'on ne les a pas vu. Je me demande s’ils sont encore en vie… </button>
+                    <button href="#" id="sc6_c3">T’es qui toi ? De toute manière tu ne peux pas m’aider.</button>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="sep" >
+            <span class="interscene"> Sofia travaille au camp pendant plusieurs jours afin de récupérer assez d’argent 
+                pour acheter un billet de train. Elle aide à cultiver les pommes de terre dans le petit potager, 
+                elle fait la lessive et aide à construire les tentes des nouveaux arrivants.
+                Le salaire est maigre et la nourriture se fait rare. Noa est de plus en plus fatigué.
+                Pourvu que les informations d’Abel les mènent au bon endroit.</span>
+        </div>
+
+        <!------------- SCENE 7 : GARE -------------->
+        <section id="scene7">
+
+            <!-- FOND -->
+            <img src="img/decor/scene7_gare.jpg" id="gare">
+
+            <div class="container">
+                <div class="reveal">
+                    <button href="#" id="fin">fin</button>
+                </div>
+                <!-- PERSONNAGES/DECORS -->
+                <img class="asset" src="img/personnage/sofia_joyeuse.png" id="sc7_sofia_joyeuse">
+                <img class="asset" src="img/personnage/noa_heureux.png" id="sc7_noa_joyeux">
+                <img class="asset" src="img/personnage/sofia_triste.png" id="sc7_sofia_triste">
+                <img class="asset" src="img/personnage/noa_triste.png" id="sc7_noa_triste">
+                <img class="asset" src="img/personnage/sofia_pas_joyeuse.png" id="sc7_sofia_colere">
+                <img class="asset" src="img/personnage/mere.png" id="sc7_mere">
+                <img class="asset" src="img/personnage/pere.png" id="sc7_pere">
+
+
+                <!-- DIALOGUE -->   
+                <div class="dialogue" id="d7">
+                    <div class="dialogue-text"> 
+                        <!-- FIN 1 -->
+                        <span id="sc7-d1">Noa : Maman ! Papa !</span>
+                        <span id="sc7-d2">Sofia : Comment saviez-vous qu’on arriverait aujourd’hui ?</span>
+                        <span id="sc7-d3">Mere: On ne le savait pas, on venait ici chaque jour dans l’espoir de vous retrouver.</span>
+                        <span id="sc7-d4">Pere: Oui, on savait que vous sauriez vous en sortir. <br>Sofia tu as su t’occuper de ton petit frère
+                             et le rassurer dans les moments difficiles.</span>
+
+                        <!-- FIN 2 -->
+                        <span id="sc7-d5">Noa: Où sont Papa et Maman?</span>
+                        <span id="sc7-d6">Sofia: On va les chercher, il ne faut pas perdre espoir Noa</span>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="sep" >
+            <span class="interscene">Ainsi s'achève l'histoire de nos deux personnages. Cependant, des choix différents les auraient conduits
+                à un chemin différent, qui sait...
+            </span>
+        </div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script> 
+        <script src="app.js"></script>
+    </body>
+    
+
+</html>
